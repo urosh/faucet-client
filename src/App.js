@@ -15,13 +15,13 @@ class App extends Component {
     addressValue: '',
     addressError: '',
     addressMessage: '',
-    completedTransactions: [],
-    pendingTransactions: []
+    completedTransactions: ['0x9d11DDd84198B30E56E31Aa89227344Cdb645e34', '0x9d11DDd84198B30E56E31Aa89227344Cdb645e34'],
+    pendingTransactions: ['0x9d11DDd84198B30E56E31Aa89227344Cdb645e34', '0x9d11DDd84198B30E56E31Aa89227344Cdb645e34']
   }
 
   componentDidMount() {
     
-    let socket = io('ws://localhost:3233', {
+    let socket = io('/',{
       path: '/faucet/socket.io',
     });
 
@@ -49,10 +49,9 @@ class App extends Component {
   }
 
   addAddress() {
-    console.log('TEST', this.state.addressValid);
     if(this.state.addressValid){
       // Need to pass the address to the server
-      fetch('http://localhost:3233/donate/' + this.state.addressValue, {
+      fetch('donate/' + this.state.addressValue, {
         method: 'GET',
       })
       .then(res => res.json())
@@ -88,7 +87,7 @@ class App extends Component {
         <div className="App">
           <div className="faucet container">
             <div className="row">
-              <div className="col-sm-8 offset-sm-3  balances">
+              <div className="col-lg-8 offset-lg-2  col-sm-12  balances">
                 <AddressInput 
                   addressValid={this.state.addressValid}
                   addressValue={this.state.addressValue}
@@ -101,7 +100,7 @@ class App extends Component {
                 />
               </div>
               
-              <div className="col-sm-8 offset-sm-2 history">
+              <div className="col-lg-10 col-sm-12 offset-lg-1 history">
                 <TransactionInfo completed={this.state.completedTransactions} pending={this.state.pendingTransactions} />
                 
               </div>

@@ -155,3 +155,59 @@ input.error{
 .transaction-list.completed-list li{
   color: forestgreen;;
 }
+
+.address-input-container{
+  height: auto;
+}
+.address-input-field{
+  height: 70px;
+}
+
+.custom-btn{
+  width: 100%;
+}
+
+.address-input-field.button-input{
+  padding-left: 15px;;
+}
+
+.row.transactions-container{
+  min-height: 0;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .address-input-container{
+    height: 60px;
+  }
+
+  .custom-btn{
+    width: 110px;
+  }
+
+  .address-input-field{
+    height: auto;
+  }
+
+  .address-input-field.button-input{
+    padding-left: 0;
+  }
+  .row.transactions-container{
+    min-height: 300px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+
