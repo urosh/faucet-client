@@ -18,12 +18,31 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>PMA Faucet</title>
+    <link rel="icon" href="%PUBLIC_URL%/puma-icon.png" sizes="32x32"/>
+    <link rel="icon" href="%PUBLIC_URL%/puma-icon.png" sizes="192x192"/>
+   
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <a href="https://pumapay.io/"><img src="%PUBLIC_URL%/pp_logo_svg.svg"></a>
+          <div class="navbar-menu">
+            <ul class="nav nav-bar">
+              <li><a class="navbar-link" href="https://pumapay.io/company/">Company</a><div class="navbar-divider"></div></li>
+              <li><a class="navbar-link" href="https://pumapay.io/product/">Product</a><div class="navbar-divider"></div></li>
+              <li><a class="navbar-link" href="https://pumapay.io/solution/">Solution</a><div class="navbar-divider"></div></li>
+              <li><a class="navbar-link" href="https://pumapay.io/news/">News</a><div class="navbar-divider"></div></li>
+              <li><a class="navbar-link" href="https://pumapay.io/contact/">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -35,5 +54,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=explicit"
+    async defer></script> -->
   </body>
 </html>
